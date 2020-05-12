@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+  }
+  body{
+    background-image:    url('https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: 1537px 753px;
+
+  }
+  
+  header{
+    color: white;
+    font-family: Roboto;
+  }
+  
+  .title,
+  .subtitle
+  {
+    margin-top: 25px;
+    text-align:center;
+    color: #04080F;
+  }
+  
+  .menu {
+    padding-top: 10px;
+    background-color: #9EB3C2;
+    height: 35px;
+  }
+  .menu ul
+  {
+    display:flex;/*faz com que os elementos da lista fiquem um ao lado do outro*/
+    justify-content: space-around;
+  }
+  .menu li{
+    list-style:none;
+    color: black;
+
+  }
+
+  a{
+    text-decoration:none;
+  }
+  
+  a:hover{/*pseudoclasse que funciona quando eu passo o mouse por cima, faz o que tá dentro dos parenteses*/
+    text-decoration:none;
+  }
+  
+  
+  
+  
+  
