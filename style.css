@@ -4,34 +4,38 @@
     box-sizing: border-box;
 }
 
-body{
+body
+{
   background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-size: auto 100vh;
   color: whitesmoke;
+  height: 100vh;
   font-size: 12px; 
 }
 /*se a tela tiver pelo menos 400px vai carregar esses estilos*/
-@media (min-width: 400px) {
+@media (min-width: 400px) 
+{
     body{
-      font-size: 14px;
-     
+      font-size: 14px;     
     }
 }
 
-@media(min-width: 600px){
+@media(min-width: 600px)
+{
   body{
     font-size: 18px;
-  }
-  
+  }  
 }
 
-@media(min-width: 1200px ){
+@media(min-width: 1200px )
+{
   body{
     font-size: 20px;
   }  
-
 }
   
-header{
+header
+{
     color: white;
     height: 100vh;
     font-family: Roboto;
@@ -39,71 +43,111 @@ header{
     justify-content: center;
     align-items: center;
 }
-  
-.title,
-.subtitle
-  {
-    text-align:center;
-    color: whitesmoke;
 
-}
-
-.title{
-  font-size: 50px;
-  font-family: Roboto;
-}
-
-
-.subtitle{
-  font-family: 'Raleway', sans-serif;
-}
-
- 
-.menu {
-
-   
-    position: fixed;
-    width: 100vw;
-    top: 0;
+.menu 
+{   
+  background-color: gray;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul
-{
-  background-color: gray;
-    display:flex;/*faz com que os elementos da lista fiquem um ao lado do outro*/
-    justify-content: space-around;
+{  
+  display:flex;/*faz com que os elementos da lista fiquem um ao lado do outro*/
+  justify-content: space-around;
 }
-.menu li{
- 
-    list-style:none;
-    color: black;
+.menu li
+{ 
+    list-style:none;    
     border-bottom: 10px ;
-
 }
 
-.menu a{
-    display: block;
-    padding: 10px 20px;
-  }
+.menu a
+{
+  display: block;
+  padding: 10px 20px;
+}
 
-a{
-    color: black;
-    text-decoration: none;
+a
+{
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+    
+a:hover
+{/*pseudoclasse que funciona quando eu passo o mouse por cima, faz o que tá dentro dos parenteses*/
+  text-decoration: none;
 }
   
-a:hover{/*pseudoclasse que funciona quando eu passo o mouse por cima, faz o que tá dentro dos parenteses*/
-    text-decoration:none;
+.title,
+.subtitle
+{
+  text-align:center;
+  color: whitesmoke;
+
 }
 
-section{
+.title
+{
+  font-size: 5em;
+  font-family: 'Neucha', cursive;
+}
+
+.subtitle
+{
   font-family: 'Raleway', sans-serif;
+  line-height: 1.8em;
 }
-.img-portfolio{
-  
-  height: 200px;
-  width: 350px;
-}
-  
 
+.portfolio
+{
+  font-family: 'Raleway', sans-serif; 
+  padding: 2em;
+  height: 100vh;
+ 
+}
+
+.portfolio h2
+{
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
   
+.portfolio .grid
+{
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px)
+{
+  .portfolio .grid{   
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure
+{
+  text-align: center;
+}
+
+.img-portfolio
+{  
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: center;
+}
   
