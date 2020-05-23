@@ -38,7 +38,7 @@ header
 {
     color: white;
     height: 100vh;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +50,7 @@ header
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul
@@ -61,12 +62,20 @@ header
 { 
     list-style:none;    
     border-bottom: 10px ;
+    
 }
 
 .menu a
 {
   display: block;
   padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color: teal;
+  color: white;
 }
 
 a
@@ -79,6 +88,23 @@ a
 a:hover
 {/*pseudoclasse que funciona quando eu passo o mouse por cima, faz o que tá dentro dos parenteses*/
   text-decoration: none;
+}
+
+.titulo{
+  transform: scale(0.2) translate(50vh);
+  opacity: 0;
+  animation: 1s ease 0.4s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+  from{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
   
 .title,
@@ -101,21 +127,44 @@ a:hover
   line-height: 1.8em;
 }
 
+.sobre,
+.contato, 
 .portfolio
 {
   font-family: 'Raleway', sans-serif; 
   padding: 2em;
-  height: 100vh;
- 
+  min-height: 100vh; 
 }
 
+@media (min-width:1200px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+.sobre h2,
+.contato h2,
 .portfolio h2
 {
   color: whitesmoke;
   margin-bottom: 1.5em;
   font-size: 2em;
 }
-  
+
+.sobre p{
+  color: white;
+  margin-bottom: 1.4em;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.sobre a{
+  color: #E1004C;
+  text-decoration: none;
+}
+
+.contato,
 .portfolio .grid
 {
   display: grid;
@@ -138,6 +187,40 @@ a:hover
   }
 }
 
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
 .portfolio figure
 {
   text-align: center;
@@ -149,4 +232,23 @@ a:hover
   width: 240px;
   object-fit: cover;
   object-position: center;
+  transition: transform 500ms;
+}
+
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a{
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
+  
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }

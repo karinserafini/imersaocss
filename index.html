@@ -4,58 +4,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karin Serafini</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <title>Karin Serafini</title>
+  <script src="https://kit.fontawesome.com/842a60292a.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="#"> Quem sou eu? </a></li>
-        <li><a href="#"> Aplicações </a></li>
-        <li><a href="#"> Contato </a></li>
+        <li><a href="#sobre"> Quem sou eu? </a></li>
+        <li><a href="#portfolio"> Aplicações </a></li>
+        <li><a href="#contato"> Contato </a></li>
       </ul>
     </nav>
-    <div>
+    <div class="titulo">
       <h1 class="title">Karin Serafini </h1>
       <h2 class="subtitle"> Aspirante a Desenvolvedora </h2>
     </div>
   </header>
-  <section>
+
+  <section class="sobre container" id="sobre">
     <h2> Um pouco sobre mim</h2>
-    <p>Olá, meu nome é Karin Serafini e sou do Oeste de Santa Catarina. Atualmente estou cursando Sistemas de
-      Informação. </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magnam et natus quaerat laudantium nisi
+      expedita illum ut? Tempore laborum id quaerat ab? Officiis suscipit excepturi illum doloribus rem ducimus?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sapiente corrupti doloribus ipsa amet eum
+      dolore! Quo, optio maxime modi quod consectetur, libero cupiditate unde molestiae minima officiis doloribus
+      deserunt.</p>
+    <p>
+      Olá, meu nome é Karin Serafini e sou do Oeste de Santa Catarina. Atualmente estou cursando Sistemas de
+      Informação.
+    </p>
+    <p>
+      Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>
+    </p>
+
+
   </section>
-  <section class="portfolio">
+
+  <section class="portfolio container" id="portfolio">
     <h2>Portfólio</h2>
+
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="https://cdn.pixabay.com/photo/2020/02/14/18/05/ecommerce-4849055_1280.jpg"
-          alt="eCommerce">
-        <figcaption>eCommerce</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio"
-          src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-          alt=">Mobile">
-        <figcaption>Mobile</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio"
-          src="https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-          alt="Web design">
-        <figcaption>Web design</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" id="projetos"
-          src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          alt="Projetos pessoais">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="https://cdn.pixabay.com/photo/2020/02/14/18/05/ecommerce-4849055_1280.jpg"
+              alt="eCommerce">
+          </figure>
+          <div class="card-back">
+            <h3>eCommerce</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio"
+              src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+              alt=">Mobile">
+          </figure>
+          <div class="card-back">
+            <h3>Mobile</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio"
+              src="https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Web design">
+          </figure>
+          <div class="card-back">
+            <h3>Web Design</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio"
+              src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+              alt="Projetos pessoais">
+          </figure>
+          <div class="card-back">
+            <h3>Projetos Pessoais</h3>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
+  </section>
+  <section class="contato container" id="contato">
+    <h2>Contato</h2>
+
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/peas">
+        <i class="fab fa-github-alt"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/paulo_caelum">
+        <i class="far fa-envelope"></i>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/paulosilveira">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://instagram.com/paulo_hipster">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+    </div>
+
   </section>
 </body>
 
